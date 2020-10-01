@@ -1,0 +1,111 @@
+:root {
+  --main-font: sans-serif;
+  --font-size: 16px;
+  --main-color: #0984e3;
+  --second-color: #2d3436;
+  --modal-color: #74b9ff;
+  --second-modal-colors: #2d3436ce;
+  --container-width: 1200px;
+}
+html {
+  box-sizing: border-box;
+  font-size: var(--font-size);
+  font-family: var(--main-font);
+  scroll-behavior: smooth;
+}
+*,
+*:before*:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*------menu de hamburgesa----------*/
+
+header {
+  position: sticky;
+  top: 0;
+  text-align: center;
+  padding: 1rem;
+  background: var(--main-color);
+}
+header h1 {
+  margin: 0;
+  text-transform: capitalize;
+  color: white;
+}
+
+.seccion {
+  padding: 2rem;
+  padding-top: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: var(--container-width);
+  min-height: 100vh;
+  text-align: center;
+}
+.panel {
+  position: fixed;
+  z-index: 998;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+  background: var(--second-modal-colors);
+  transition: all 0.2s ease-in;
+  display: none;
+}
+
+.panel-show {
+  display: block;
+  /* transform: translate(0, -100%); */
+  transition: all 0.2s ease-in-out;
+}
+
+#panel-btn {
+  background-color: var(--main-color);
+  position: fixed;
+  z-index: 999;
+  bottom: 1vh;
+  right: 1vw;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+}
+
+.menu {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+.menu a {
+  padding: 2rem;
+  width: inherit;
+  display: block;
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.menu a:hover {
+  font-weight: bold;
+  color: var(--second-color);
+  background: var(--main-color);
+}
